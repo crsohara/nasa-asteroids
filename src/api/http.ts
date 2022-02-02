@@ -26,11 +26,13 @@ const constructResource = (url: string, params: apiQueryParams) => {
   const keys = Object.keys(params)
 
   keys.forEach(key => {
-    if (!params[key as keyof apiQueryParams]) {
+    const item = params[key as keyof apiQueryParams]
+
+    if (!item) {
       return
     }
 
-    resource.searchParams.append(key, params[key as keyof apiQueryParams])
+    resource.searchParams.append(key, item)
   })
 
   return resource.toString()
