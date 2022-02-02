@@ -80,8 +80,6 @@ export const getAsteroidsInDateRange = (startDate: string, difference: any) => {
     )
 }
 
-
-
 export const getAsteroids = (startDate: string, endDate: string|undefined = undefined) => {
   const difference = moment(endDate).diff(moment(startDate), 'days')
 

@@ -9,10 +9,10 @@ const Asteroids = ({asteroids}: {asteroids: Array<NearEarthObject>}) => {
   }
 
   return (
-    <ul>
+    <ul className="mx-2">
       {asteroids.map((item: NearEarthObject) => (
-        <li key={item.id}>
-          <Asteroid asteroid={item} />
+        <li key={item.id} className="border-b">
+          <Asteroid asteroid={item} simple={true} />
         </li>
       ))
       }
